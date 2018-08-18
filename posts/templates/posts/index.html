@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>ログイン画面</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'posts/login.css' %}" />
+</head>
+<body>
+<div id="form">
+    <p class="form-title">家計簿ログイン</p>
+    <form action="post">
+        <p>ID</p>
+        <p class="username"><input type="text" name="username" maxlength="32" autocomplete="OFF" /></p>
+        <p>Password</p>
+        <p class="password"><input type="password" name="password" maxlength="32" autocomplete="OFF" /></p>
+        <p class="submit"><input type="submit" value="ログイン" /></p>
+        <a href ="{% url 'registory' %}">登録</a>
+    </form>
+</div>
+</body>
+</html>
