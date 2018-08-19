@@ -3,12 +3,13 @@ from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.http import Http404, HttpResponseRedirect
-#from .models import Post
+from .models import Post
 from .models import Kakikomi
 from django.shortcuts import render, redirect
 from . import forms, models
 #from .models import Kakikomi
 from .forms import KakikomiForm
+from django.contrib.auth.decorators import login_required
 
 def index(request):
     # return HttpResponse("Hello World! このページは投稿のインデックスです。")
@@ -18,10 +19,6 @@ def index(request):
 def post_detail(request):
     #post = get_object_or_404(Post, pk=post_id)
     return render(request, 'posts/post_detail.html')
-
-def registory(request):
-    #post = get_object_or_404(Post, pk=post_id)
-    return render(request, 'posts/toroku.html')
 
 def kakikomi(request):
     #return HttpResponse(f)
